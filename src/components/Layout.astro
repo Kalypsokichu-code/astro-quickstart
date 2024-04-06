@@ -9,12 +9,25 @@ const { title } = Astro.props as Props;
 ---
 
 <!DOCTYPE html>
-<html lang="en">
+<html data-wf-page="66036f769a7419920900d259" data-wf-site="66036f769a7419920900d178" lang="en">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width">
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-	<title>{title}</title>
+  <link rel="icon" type="image/x-icon" href="/favicon.png" />
+  <link href="/webclip.png" rel="apple-touch-icon">
+  <title>{title}</title>
+  <meta content="Multidisciplinary UI / UX Designer" name="description">
+  <meta content="Kalypso" property="og:title">
+  <meta content="Multidisciplinary UI / UX Designer" property="og:description">
+  <meta content="Kalypso" property="twitter:title">
+  <meta content="Multidisciplinary UI / UX Designer" property="twitter:description">
+  <meta property="og:type" content="website">
+  <meta content="summary_large_image" name="twitter:card">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Y60qUOxupL1wWo06CwR0jH5jBZBHEwtp74lD5bqSl9Y" name="google-site-verification">
+  <link rel="preconnect" href="https://cdn.fonts.net">
+  <link href="https://cdn.fonts.net/kit/a0cce53b-b9cf-48dd-838d-9a55de6811ec/a0cce53b-b9cf-48dd-838d-9a55de6811ec.css" rel="stylesheet" />
+
 </head>
 <body>
 	<slot />
@@ -22,30 +35,142 @@ const { title } = Astro.props as Props;
 </html>
 
 <style>
-  :root {
-    --font-size-base: clamp(1rem, 0.34vw + 0.91rem, 1.19rem);
-		--font-size-lg: clamp(1.2rem, 0.7vw + 1.2rem, 1.5rem); 
-    --font-size-xl: clamp(2.44rem, 2.38vw + 1.85rem, 3.75rem);
-    --color-text: hsl(12, 5%, 4%);
-    --color-bg: hsl(10, 21%, 95%);
+  @media (max-width:767px) and (min-width:480px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="21c2f259-8a07-caae-6e61-b56b19f3a5f9"] {-webkit-transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1;}}@media (max-width:479px) {html.w-mod-js:not(.w-mod-ix) [data-w-id="21c2f259-8a07-caae-6e61-b56b19f3a5f9"] {-webkit-transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-moz-transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);-ms-transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);transform:translate3d(150%, 0%, 0) scale3d(1, 1, 1) rotateX(0) rotateY(0) rotateZ(0) skew(0, 0);opacity:1;}}
+@media screen and (min-width: 768px) {
+  [item-style=wide] {
+    grid-column: span 2;
+    grid-row: span 1;
   }
-  html {
-    font-family: system-ui, sans-serif;
-    font-size: var(--font-size-base);
-    color: var(--color-text);
-    background-color: var(--color-bg);
+  [item-style=tall] {
+    grid-column: span 1;
+    grid-row: span 2;
   }
-  body {
-    margin: 0;
+}
+
+.grain {
+  pointer-events: none;
+}
+
+img, video, canvas {
+  overflow: hidden !important;
+}
+
+@keyframes loop-move-left {
+  to {transform: translateX(-100%);}
+}
+
+[data-hover-pause] * {
+  animation-play-state: running;
+}
+
+[data-hover-pause]:hover * {
+  animation-play-state: paused;
+}
+
+:root {
+  --font--inherit: inherit;
+  --font-weight--inherit: inherit;
+  --font-weight--100: 100;
+  --font-weight--200: 200;
+  --font-weight--300: 300;
+  --font-weight--400: 400;
+  --font-weight--500: 500;
+  --font-weight--600: 600;
+  --font-weight--700: 700;
+  --font-weight--800: 800;
+  --font-weight--900: 900;
+  --text-transform--none: none;
+  --text-transform--uppercase: uppercase;
+  --text-transform--capitalize: capitalize;
+  --text-transform--lowercase: lowercase;
+  --text-transform--inherit: inherit;
+}
+
+body {
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+}
+
+button {
+  background-color: unset;
+  padding: unset;
+  text-align: inherit;
+}
+
+img::selection, video::selection {
+  background: transparent;
+}
+
+:is(h1, h2, h3, h4, h5, h6, p) a {
+  text-decoration: underline;
+}
+
+.w-richtext > *:first-child {
+  margin-top: 0;
+}
+
+.w-richtext > *:last-child {
+  margin-bottom: 0;
+}
+
+.wf-empty[class*="--"], video.wf-empty {
+  padding: 0;
+}
+
+video, svg {
+  display: block;
+  width: 100%;
+  object-fit: cover;
+}
+
+section, header, footer {
+  position: relative;
+}
+
+[data-padding-top="none"], [data-padding-bottom="none"], [data-padding-top="small"], [data-padding-bottom="small"], [data-padding-top="main"], [data-padding-bottom="main"], [data-padding-top="large"], [data-padding-bottom="large"] {
+  /* Appropriate padding values need to be set here, example: */
+  padding-top: var(--padding-vertical--none); /* Adjust according to actual variable definitions */
+  padding-bottom: var(--padding-vertical--none); /* Adjust according to actual variable definitions */
+}
+
+.u-line-clamp-1, .u-line-clamp-2, .u-line-clamp-3, .u-line-clamp-4 {
+  display: -webkit-box;
+  overflow: hidden;
+  -webkit-line-clamp: 1; /* Adjust according to the class */
+  -webkit-box-orient: vertical;
+}
+
+:root, [data-theme="light"], [data-theme="dark"] [data-theme="invert"], [data-theme="dark"], [data-theme="invert"], [data-theme="light"] [data-theme="invert"] {
+  /* Theme-specific styles go here */
+}
+
+[data-button-style="secondary"] {
+  /* Secondary button styles go here */
+}
+
+:is(c, :where([data-theme]:not([data-theme="inherit"]))) {
+  /* Apply theme colors */
+}
+
+@media screen and (max-width: 991px) {
+  /* Tablet-specific styles go here */
+}
+
+@media screen and (max-width: 767px) {
+  /* Landscape phone-specific styles go here */
+}
+
+@media screen and (max-width: 479px) {
+  /* Portrait phone-specific styles go here */
+}
+
+@media screen and (min-width: 992px) {
+  [data-order-desktop-first="true"], [data-order-desktop-last="true"] {
+    order: -1; /* Adjust as necessary */
   }
-  :global(h1) {
-    font-size: var(--font-size-xl);
-  }
-  :global(h2) {
-    font-size: var(--font-size-lg);
-  }
-  :global(code) {
-    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-			Bitstream Vera Sans Mono, Courier New, monospace;
-  }
+}
+
+[data-align-items-start="true"], [data-align-items-center="true"], [data-align-items-end="true"], [data-justify-content-start="true"], [data-justify-content-center="true"], [data-justify-content-end="true"], [data-justify-content="top"], [data-justify-content="center"], [data-justify-content="bottom"], [data-text-align-left="true"], [data-text-align-center="true"], [data-text-align-right="true"], [data-max-width-none="true"] {
+  /* Alignment and justification styles */
+}
 </style>
